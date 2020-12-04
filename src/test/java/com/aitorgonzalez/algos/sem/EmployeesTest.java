@@ -1,5 +1,5 @@
 package com.aitorgonzalez.algos.sem;
- 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -23,29 +23,29 @@ class EmployeesTest {
 		employeeList.add(e3);
 		employeeList.add(e4);
 		employeeList.add(e5);
-		
+
 		String expectedEmployeeNamesList = "John,Martin,Mary,Stephan,Gary";
 		String employeeNamesList = Employees.printEmployeeNames(employeeList);
 		Assertions.assertEquals(employeeNamesList, expectedEmployeeNamesList);
 	}
-	
+
 	@Test
 	void printNameOneEmployee() {
-		Employee e1 = new Employee("John", 21);		
+		Employee e1 = new Employee("John", 21);
 		String expectedEmployeeNamesList = "John";
 		String employeeNamesList = Employees.printEmployeeNames(Arrays.asList(e1));
 		Assertions.assertEquals(employeeNamesList, expectedEmployeeNamesList);
 	}
-	
+
 	@Test
-	void printNameEmptyList() {	
+	void printNameEmptyList() {
 		String expectedEmployeeNamesList = "";
 		String employeeNamesList = Employees.printEmployeeNames(Collections.emptyList());
 		Assertions.assertEquals(employeeNamesList, expectedEmployeeNamesList);
 	}
-	
+
 	@Test
-	void printNameNullList() {	
+	void printNameNullList() {
 		String expectedEmployeeNamesList = "";
 		String employeeNamesList = Employees.printEmployeeNames(null);
 		Assertions.assertEquals(employeeNamesList, expectedEmployeeNamesList);

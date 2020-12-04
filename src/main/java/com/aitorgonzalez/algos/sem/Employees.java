@@ -6,16 +6,16 @@ import java.util.stream.Collectors;
 
 class Employees {
 
-	public static void main(String args[]) {
-		
+	public static void main(String[] args) {
+
 		Employees.printEmployeeNames(createEmployeeList());
 
 	}
-	
+
 	public static String printEmployeeNames(List<Employee> employees) {
-		if(employees == null || employees.isEmpty()) return "";
-		String employeeNames = employees.stream()
-				.map(Employee::getName).collect(Collectors.joining(","));
+		if (employees == null || employees.isEmpty())
+			return "";
+		String employeeNames = employees.stream().map(Employee::getName).collect(Collectors.joining(","));
 		System.out.println(employeeNames);
 		return employeeNames;
 	}
@@ -48,6 +48,10 @@ class Employee {
 
 	public String getName() {
 		return this.name;
+	}
+
+	public int getAge() {
+		return this.age;
 	}
 
 }
